@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🔒 Secure Vault - Password Manager
 
 A modern, privacy-first password manager with client-side encryption built with Next.js, TypeScript, and MongoDB.
@@ -260,3 +261,6 @@ For issues or questions, please check:
 ---
 
 **Built with ❤️ and 🔒 for privacy-conscious users**
+=======
+# SecureVault
+>>>>>>> 217ed4f092f09cca7c15f8fe18858f07003b5cb1
