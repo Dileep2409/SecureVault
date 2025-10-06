@@ -1,57 +1,68 @@
-<<<<<<< HEAD
-# 🔒 Secure Vault - Password Manager
+
+#  Secure Vault - Password Manager
 
 A modern, privacy-first password manager with client-side encryption built with Next.js, TypeScript, and MongoDB.
 
-## ✨ Features
+### Features
 
-### Must-Have Features ✅
-- **Password Generator**: Customizable strong password generation
-  - Adjustable length (8-64 characters)
-  - Include/exclude uppercase, lowercase, numbers, symbols
-  - Exclude similar-looking characters (i, l, 1, L, o, 0, O)
-  - Real-time password strength indicator
+- User authentication (Sign Up / Login)
+- Generate secure passwords instantly
+- Save passwords securely in MongoDB
+- Search, edit, and delete passwords
+- Copy password feature
+- Data encrypted for security
 
-- **Simple Authentication**: Email + password authentication
-  - Secure user registration and login
-  - Password hashing with bcrypt
-  - Session management with NextAuth.js
 
-- **Vault Management**: Complete CRUD operations
-  - Store: title, username, password, URL, notes
-  - Edit and delete vault items
-  - Search and filter functionality
+## Technologies Used
 
-- **Client-Side Encryption**: Zero-knowledge architecture
-  - AES-256 encryption using CryptoJS
-  - Encryption key derived from user's master password
-  - Server never sees plaintext data
-  - PBKDF2 key derivation with 10,000 iterations
+- Frontend: React.js, Next.js, CSS
+- Backend: Node.js, Express.js
+- Database: MongoDB (Cloud)
+- Authentication: JWT
+- Others: bcrypt, crypto-js, Mongoose
 
-- **Copy to Clipboard**: Secure password copying
-  - Auto-clear clipboard after 30 seconds
-  - Visual feedback on copy
+---
 
-- **Search & Filter**: Quick vault item lookup
-  - Search by title, username, URL, or notes
-  - Real-time filtering
+## How to Run Locally
 
-### Nice-to-Have Features ✅
-- **Dark Mode**: System preference detection + manual toggle
-- **Modern UI**: Clean, responsive design with Tailwind CSS
-- **Password Strength Indicator**: Visual feedback on password quality
+1. Clone the repository
+```bash
+git clone https://github.com/Dileep2409/SecureVault.git
 
-## 🛠️ Tech Stack
 
-- **Frontend**: Next.js 14 (App Router), React 18, TypeScript
-- **Backend**: Next.js API Routes
-- **Database**: MongoDB with Mongoose
-- **Authentication**: NextAuth.js
-- **Encryption**: CryptoJS (AES-256, PBKDF2)
-- **Styling**: Tailwind CSS
-- **Icons**: Lucide React
+## Go to project directory
 
-## 🚀 Getting Started
+cd SecureVault
+
+
+## Install dependencies
+
+npm install
+
+
+## Install dependencies
+
+npm install
+
+## Install dependencies
+
+npm install
+
+## Open in browser
+
+http://localhost:5000
+
+## Usage
+
+Sign Up or Login
+
+Generate a new password
+
+Save password with a label
+
+Search, Edit, or Delete saved passwords
+
+Copy password when needed
 
 ### Prerequisites
 
@@ -60,17 +71,17 @@ A modern, privacy-first password manager with client-side encryption built with 
 
 ### Installation
 
-1. **Clone the repository**
+1. Clone the repository**
 ```bash
 cd "C:\Users\hp\Desktop\Password Generator"
 ```
 
-2. **Install dependencies**
+2. Install dependencies**
 ```bash
 npm install
 ```
 
-3. **Set up environment variables**
+3. Set up environment variables**
 
 Create a `.env` file in the root directory:
 
@@ -90,12 +101,12 @@ To generate a secure `NEXTAUTH_SECRET`, run:
 node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
 ```
 
-4. **Run the development server**
+4. Run the development server
 ```bash
 npm run dev
 ```
 
-5. **Open your browser**
+5. Open your browser
 
 Navigate to [http://localhost:3000](http://localhost:3000)
 
@@ -106,7 +117,7 @@ npm run build
 npm start
 ```
 
-## 🌐 Deployment
+## Deployment
 
 ### Vercel (Recommended)
 
@@ -126,13 +137,13 @@ The app can be deployed to any platform that supports Next.js:
 - Render
 - AWS Amplify
 
-## 🔐 Security Features
+##  Security Features
 
 ### Client-Side Encryption
-- **Zero-Knowledge Architecture**: Your master password never leaves your device
-- **AES-256 Encryption**: Industry-standard encryption algorithm
-- **PBKDF2 Key Derivation**: 10,000 iterations for key strengthening
-- **Unique IVs**: Each vault item uses a unique initialization vector
+- Zero-Knowledge Architecture: Your master password never leaves your device
+- AES-256 Encryption: Industry-standard encryption algorithm
+- PBKDF2 Key Derivation: 10,000 iterations for key strengthening
+- Unique IVs: Each vault item uses a unique initialization vector
 
 ### Best Practices
 - Passwords hashed with bcrypt (12 rounds)
@@ -143,17 +154,17 @@ The app can be deployed to any platform that supports Next.js:
 
 ### Important Security Notes
 
-⚠️ **Master Password Recovery**: If you forget your master password, your vault data **cannot be recovered**. This is by design - true zero-knowledge encryption means even we cannot access your data.
+ Master Password Recovery: If you forget your master password, your vault data cannot be recovered**. This is by design - true zero-knowledge encryption means even we cannot access your data.
 
-⚠️ **Session Storage**: The app temporarily stores your password in session storage to derive the encryption key. This is cleared on logout and when the browser is closed.
+ Session Storage: The app temporarily stores your password in session storage to derive the encryption key. This is cleared on logout and when the browser is closed.
 
-## 📱 Usage Guide
+##  Usage Guide
 
 ### First Time Setup
 
-1. **Sign Up**: Create an account with your email and a strong master password
-2. **Remember Your Password**: Write down your master password - it cannot be recovered!
-3. **Sign In**: Log in with your credentials
+1. Sign Up: Create an account with your email and a strong master password
+2. Remember Your Password: Write down your master password - it cannot be recovered!
+3. Sign In: Log in with your credentials
 
 ### Generating Passwords
 
@@ -164,12 +175,12 @@ The app can be deployed to any platform that supports Next.js:
 
 ### Managing Vault Items
 
-1. **Add Item**: Click "Add Item" button
-2. **Fill Details**: Enter title (required), username, password, URL, notes
-3. **Save**: Click "Save" to encrypt and store
-4. **Edit**: Click edit icon on any item
-5. **Delete**: Click trash icon (with confirmation)
-6. **Search**: Use the search bar to filter items
+1. Add Item: Click "Add Item" button
+2. Fill Details: Enter title (required), username, password, URL, notes
+3. Save: Click "Save" to encrypt and store
+4. Edit: Click edit icon on any item
+5. Delete: Click trash icon (with confirmation)
+6. Search: Use the search bar to filter items
 
 ### Security Tips
 
@@ -179,7 +190,7 @@ The app can be deployed to any platform that supports Next.js:
 - Regularly update your vault passwords
 - Use the password generator for all new accounts
 
-## 🏗️ Project Structure
+##  Project Structure
 
 ```
 secure-vault/
@@ -219,7 +230,7 @@ secure-vault/
 └── next.config.js
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Manual Testing Checklist
 
@@ -235,22 +246,22 @@ secure-vault/
 - [ ] Sign out
 - [ ] Verify encryption (check database - should see encrypted data)
 
-## 🤝 Contributing
+##  Contributing
 
 This is a personal project, but suggestions are welcome!
 
-## 📄 License
+## License
 
 MIT License - feel free to use this project for learning or personal use.
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 - Next.js team for the amazing framework
 - MongoDB for the database
 - CryptoJS for encryption utilities
 - Lucide for beautiful icons
 
-## 📞 Support
+##  Support
 
 For issues or questions, please check:
 1. This README
@@ -258,9 +269,8 @@ For issues or questions, please check:
 3. MongoDB is running and accessible
 4. Node.js version is 18+
 
----
 
-**Built with ❤️ and 🔒 for privacy-conscious users**
-=======
+Built with and for privacy-conscious users
+
 # SecureVault
->>>>>>> 217ed4f092f09cca7c15f8fe18858f07003b5cb1
+
