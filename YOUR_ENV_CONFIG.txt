@@ -1,0 +1,44 @@
+# ===========================================
+# YOUR ENVIRONMENT CONFIGURATION
+# ===========================================
+# Copy this content to a file named .env in the project root
+# ===========================================
+
+# MongoDB Connection
+MONGODB_URI=mongodb+srv://dileepsengar5141:dileepsengar5141@cluster0.vuko71c.mongodb.net/secure-vault?retryWrites=true&w=majority&appName=Cluster0
+
+# NextAuth Configuration
+NEXTAUTH_URL=http://localhost:3000
+
+# NEXTAUTH_SECRET - Generate by running this command:
+# node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
+# Then replace the line below with your generated secret:
+NEXTAUTH_SECRET=GENERATE_AND_REPLACE_THIS
+
+# ===========================================
+# INSTRUCTIONS:
+# ===========================================
+# 1. Generate NEXTAUTH_SECRET:
+#    Run: node -e "console.log(require('crypto').randomBytes(32).toString('base64'))"
+#    Copy the output
+#
+# 2. Create .env file:
+#    - Create a new file named exactly: .env (no extension)
+#    - Copy the 3 lines above (MONGODB_URI, NEXTAUTH_URL, NEXTAUTH_SECRET)
+#    - Replace GENERATE_AND_REPLACE_THIS with your generated secret
+#
+# 3. Restart the server:
+#    - Stop: Press Ctrl+C
+#    - Start: npm run dev (or double-click START.bat)
+#
+# 4. Test signup:
+#    - Go to http://localhost:3000
+#    - Click "Sign up"
+#    - Create your account
+#
+# ===========================================
+# SECURITY NOTE:
+# ===========================================
+# Never share your .env file or commit it to git!
+# The .gitignore file already protects it.
+# ===========================================
